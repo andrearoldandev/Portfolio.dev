@@ -12,6 +12,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 import EstudiosIcon from '../components/icons/EstudiosIcon.astro';
 import Code from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import SobreMiIcono from '../components/icons/SobreMiIcono.astro';
 ---
 
 <Layout 
@@ -26,7 +27,7 @@ description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Des
 				alt="andrea photo"
 			/>
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, soy Andrea Roldán 
+				¡Hey!, soy Andrea Roldán 
 				<a href="https://www.linkedin.com/in/andrea-rold%C3%A1n-ag%C3%BCero-9ba273a0/" 
 				target="_blank" 
 				rel="noopener"
@@ -75,6 +76,20 @@ description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Des
 				Proyectos
 			</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<SobreMiIcono class="size-7" />
+				Sobre mí
+			</h2>
+			<p class="ml-4 text-xl lg:text-xl flex gap-x-2 mb-3 text-wrap max-w-[700px] text-pretty text-justify"><span>Mi nombre es <span class="text-blue-400/95">Andrea Roldán</span> y tengo 30 años, nací en Sallent de Llobregat (Manresa, Cataluña). Una vez terminados mis estudios de Bachillerato científico-sanitario, 
+				cursé dos <span class="text-blue-400/95">FP de Grado Superior de Laboratorio</span> (Anatomía Patológica y Citología y Laboratorio en Diagnóstico Clínico) pero al poco tiempo sufrí una caída que me provocó una enferemdad rara llamada
+				<span class="text-violet-400/95">Síndrome de Südeck</span>, la cual no me permite realizar como a mi me gustaría mi carrera Científica. Por esa razón y despúes de adentrarme en el <span class="text-blue-400/95">diseño gráfico e ilustración</span>, decidí submergirme en el mundo de la tecnología y la informática, el cual siempre me ha
+				llamado la atención para reciclarme laboralmente.</span></p>
+			<p class="ml-4 text-xl lg:text-xl flex gap-x-2 mb-3 text-wrap max-w-[700px] text-pretty text-justify"><span><span class="text-blue-400/95">Empecé desde cero</span> en el mundo de la Programación pero durante el Certificado de Profesionalidad que he cursado recientemente, mis nuevos conocimientos me han permitido
+				realizar proyectos muy divertidos y diversos de los cuales he aprendido muchísimo. Tengo muchas ganas de <span class="text-violet-400/95">seguir aprendiendo y demostrar hasta donde soy capaz de llegar</span> en esta nueva etapa tan impresionante para mí.</span>
+			</p>
 		</SectionContainer>
 	</main>
 </Layout>

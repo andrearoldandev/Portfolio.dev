@@ -5,6 +5,7 @@ import CssIcon from "./icons/CssIcon.astro";
 import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
 import Bootstrap from "./icons/Bootstrap.astro";
 import SqlIcon from "./icons/SqlIcon.astro";
+import SocialPill from "./SocialPill.astro";
 
 const TAGS = {
     HTML: {
@@ -67,14 +68,48 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ image, title, description, tags }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article>
             <h3 class="text-2xl font-semibold text-blue-400 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
+            <a class={`
+                rounded-full border border-white/10 
+                flex justify-center items-center gap-x-2 mb-2 
+                py-1 px-2 md:py-2 md:px-4 bg-white/5 
+                text-xs md:text-base
+                hover:scale-110 hover:bg-white/10 
+                transition
+                `}
+                { ...Astro.props}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={link}>Click para visitar la página
+                
+            </a>
+            <a class={`
+                rounded-full border border-white/10 
+                flex justify-center items-center gap-x-2 mb-4 
+                py-1 px-2 md:py-2 md:px-4 bg-white/5 
+                text-xs md:text-base
+                hover:scale-110 hover:bg-white/10 
+                transition
+                `}
+                { ...Astro.props}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={github}>GitHub
+                
+            </a>
             <ul class="flex gap-x-2 flex-row">
+                
                 {tags.map((tag) => (
                     <li>
-                        <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
+                        <span class={` rounded-full border border-white/10 
+                            flex justify-center items-center gap-x-2 
+                            py-1 px-2 md:py-2 md:px-4 bg-white/5 
+                            text-xs md:text-base
+                            hover:scale-110 hover:bg-white/10 
+                            transition ${tag.class} py-1 px-2 mb-4`}>
                             <tag.icon class="size-4" />
                             {tag.name}
                         </span>
