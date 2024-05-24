@@ -1,0 +1,39 @@
+---
+import { date } from "astro/zod"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCIE = [
+    {
+        date: 'Mayo 2024',
+        title: 'Certificado de Profesionalidad Nivel 3, 630 horas',
+        description:
+            'Certificado de TECNARA. Programación Orientada a Objetos y Bases de Datos Relacionales.',
+        link: '#',    
+    },
+    {
+        date: 'Diciembre 2023',
+        title: 'Introducción al Desarrollo Web',
+        description:
+            'Certificado de Desafío Latam',
+        link: '#',   
+    },
+    {
+        date: 'Diciembre 2023',
+        title: 'Responsive Web Design',
+        description:
+            'Certificado de FreeCodeCamp, 300 horas',
+        link: '#',   
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">                  
+    {
+        EXPERIENCIE.map(experiencie => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }
+    
+</ol>

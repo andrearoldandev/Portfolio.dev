@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+import InstagramIcon from '../components/icons/InstagramIcon.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import EstudiosIcon from '../components/icons/EstudiosIcon.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout 
+title="Portfolio de Andrea - Desarrolladora Programadora Web y Bases de Datos Relacionales"
+description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Desarrolladora y Programadora. Especializada en crear aplicaciones únicas."
+>
+	<main class="px-4">
+		<SectionContainer class = "py-44 pb-32">
+			<img 
+				class = "rounded-full size-20 mb-4" 
+				src="https://media.licdn.com/dms/image/D4D03AQH4iVqlm9h3Og/profile-displayphoto-shrink_800_800/0/1700652107351?e=2147483647&v=beta&t=K7HNs-VsimN2G6uGf5zV4LMlXpvqV-gNidM9nKKLIVo" 
+				alt="andrea photo"
+			/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hey, soy Andrea Roldán 
+				<a href="https://www.linkedin.com/in/andrea-rold%C3%A1n-ag%C3%BCero-9ba273a0/" 
+				target="_blank" 
+				rel="noopener"
+				class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>Junior.</span>
+				<span class="text-blue-400/95"> Desarrolladora Web, Software y Bases de Datos.</span>
+				<span class="text-violet-400/95"> De Barcelona pero resido en Zaragoza, España.</span>
+				<span class="opacity-85"> Especializada en crear Aplicaciones y Webs únicas.</span> 
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill href="https://github.com/andrearoldandev">
+						<GitHubIcon class="size-4 md:size-6"></GitHubIcon>
+						GitHub
+					</SocialPill>
+					<SocialPill href="https://www.linkedin.com/in/andrea-rold%C3%A1n-ag%C3%BCero-9ba273a0/">
+						<LinkedInIcon class="size-4 md:size-6"></LinkedInIcon>
+						LinkedIn
+					</SocialPill>
+					<SocialPill href="mailto:andrea-roldan@outlook.es">
+						<MailIcon class="size-4 md:size-6"></MailIcon>
+						andrea-roldan@outlook.es
+					</SocialPill>
+					<SocialPill href="https://www.instagram.com/ara_digitalart/">
+						<InstagramIcon class="size-4 md:size-6"></InstagramIcon>
+						ara_digitalart
+					</SocialPill>
+			</nav>	
+		</SectionContainer>
+
+		<SectionContainer id="estudios">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<EstudiosIcon class="size-7" />
+				Estudios IT
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
+
+
