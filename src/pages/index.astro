@@ -13,6 +13,7 @@ import EstudiosIcon from '../components/icons/EstudiosIcon.astro';
 import Code from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
 import SobreMiIcono from '../components/icons/SobreMiIcono.astro';
+import ContactoIcono from '../components/icons/ContactoIcono.astro';
 ---
 
 <Layout 
@@ -20,14 +21,14 @@ title="Portfolio de Andrea - Desarrolladora Programadora Web y Bases de Datos Re
 description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Desarrolladora y Programadora. Especializada en crear aplicaciones únicas."
 >
 	<main class="px-4">
-		<SectionContainer class = "py-44 pb-32">
+		<SectionContainer class = "py-40 pb-40">
 			<img 
 				class = "rounded-full size-20 mb-4" 
 				src="https://media.licdn.com/dms/image/D4D03AQH4iVqlm9h3Og/profile-displayphoto-shrink_800_800/0/1700652107351?e=2147483647&v=beta&t=K7HNs-VsimN2G6uGf5zV4LMlXpvqV-gNidM9nKKLIVo" 
 				alt="andrea photo"
 			/>
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				¡Hey!, soy Andrea Roldán 
+			<h1 class="text-white text-xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				<span><span class="text-violet-400/95">¡Hey!</span> Soy Andrea Roldán</span> 
 				<a href="https://www.linkedin.com/in/andrea-rold%C3%A1n-ag%C3%BCero-9ba273a0/" 
 				target="_blank" 
 				rel="noopener"
@@ -38,8 +39,8 @@ description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Des
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span>Junior.</span>
 				<span class="text-blue-400/95"> Desarrolladora Web, Software y Bases de Datos.</span>
-				<span class="text-violet-400/95"> De Barcelona pero resido en Zaragoza, España.</span>
-				<span class="opacity-85"> Especializada en crear Aplicaciones y Webs únicas.</span> 
+				<span > De Barcelona pero resido en Zaragoza, España.</span>
+				<span class="text-violet-400/95"> Especializada en crear Aplicaciones y Webs únicas.</span> 
 			</h2>
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
@@ -84,12 +85,35 @@ description="Contrata a Andrea Roldán para crear tu aplicación Web o Java. Des
 				Sobre mí
 			</h2>
 			<p class="ml-4 text-xl lg:text-xl flex gap-x-2 mb-3 text-wrap max-w-[700px] text-pretty text-justify"><span>Mi nombre es <span class="text-blue-400/95">Andrea Roldán</span> y tengo 30 años, nací en Sallent de Llobregat (Manresa, Cataluña). Una vez terminados mis estudios de Bachillerato científico-sanitario, 
-				cursé dos <span class="text-blue-400/95">FP de Grado Superior de Laboratorio</span> (Anatomía Patológica y Citología y Laboratorio en Diagnóstico Clínico) pero al poco tiempo sufrí una caída que me provocó una enferemdad rara llamada
-				<span class="text-violet-400/95">Síndrome de Südeck</span>, la cual no me permite realizar como a mi me gustaría mi carrera Científica. Por esa razón y despúes de adentrarme en el <span class="text-blue-400/95">diseño gráfico e ilustración</span>, decidí submergirme en el mundo de la tecnología y la informática, el cual siempre me ha
+				cursé dos <span class="text-blue-400/95">FP de Grado Superior de Laboratorio</span> (Anatomía Patológica y Citología y Laboratorio en Diagnóstico Clínico) pero al poco tiempo sufrí una caída que me provocó una enfermedad rara llamada
+				<span class="text-violet-400/95">Síndrome de Südeck</span>, la cual no me permite realizar como a mi me gustaría mi carrera Científica. Por esa razón y despúes de adentrarme en el <span class="text-blue-400/95">diseño gráfico e ilustración</span>, decidí sumergirme en el mundo de la tecnología y la informática, el cual siempre me ha
 				llamado la atención para reciclarme laboralmente.</span></p>
 			<p class="ml-4 text-xl lg:text-xl flex gap-x-2 mb-3 text-wrap max-w-[700px] text-pretty text-justify"><span><span class="text-blue-400/95">Empecé desde cero</span> en el mundo de la Programación pero durante el Certificado de Profesionalidad que he cursado recientemente, mis nuevos conocimientos me han permitido
 				realizar proyectos muy divertidos y diversos de los cuales he aprendido muchísimo. Tengo muchas ganas de <span class="text-violet-400/95">seguir aprendiendo y demostrar hasta donde soy capaz de llegar</span> en esta nueva etapa tan impresionante para mí.</span>
 			</p>
+		</SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ContactoIcono class="size-7"/>
+				Contacto
+			</h2>
+			<p class="text-xl mb-6 items-center text-center"><span>Si quieres ponerte en contacto conmigo o saber todavía más sobre mí, no dudes en enviarme un mensaje.<span class="text-blue-400/95"> Estaré encantada de conocerte.</span></span></p>
+			<form action="https://formsubmit.co/andrea-roldan@outlook.es" class="space-y-8" method="POST">
+				<div>
+					<label for="email" class="block mb-2 text-sm font-medium text-white-900 ">Tu email</label>
+					<input name="email" type="email" id="email" class="shadow-sm bg-black-90 border border-gray-500 text-white-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="ejemplo@gmail.com" required>
+				</div>
+				<div>
+					<label for="subject" class="block mb-2 text-sm font-medium text-white-900">Asunto</label>
+					<input name="subject" type="text" id="subject" class="shadow-sm bg-black-90 border border-gray-500 text-white-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="¿En que te puedo ayudar?" required>
+				</div>
+				<div class="sm:col-span-2">
+					<label for="message" class="block mb-2 text-sm font-medium text-white-900">Tu mensaje</label>
+					<textarea name="textarea" id="message" rows="6" class="block p-2.5 w-full text-sm text-white-900 bg-black-90 rounded-lg shadow-sm border border-gray-500 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Deja un mensaje..."></textarea>
+				</div>
+				<button name="button" type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-violet-600 sm:w-fit hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Enviar</button>
+			</form>
 		</SectionContainer>
 	</main>
 </Layout>
